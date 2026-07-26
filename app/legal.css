@@ -1,0 +1,47 @@
+footer a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.legal {
+  background: var(--ivory);
+  min-height: 100vh;
+  padding: 8vw max(20px, calc((100vw - 900px) / 2));
+}
+
+.legal .back {
+  color: #745b32;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.legal h1 {
+  color: var(--navy);
+  font-size: clamp(48px, 7vw, 80px);
+  line-height: 1;
+}
+
+.legal h2 {
+  color: var(--navy);
+  font-size: 32px;
+  margin-top: 42px;
+}
+
+.legal p,
+.legal li {
+  line-height: 1.85;
+}
+
+.legal .updated {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.legal a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
