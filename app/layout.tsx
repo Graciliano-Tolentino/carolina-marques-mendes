@@ -57,8 +57,8 @@ export const metadata: Metadata = {
     images: ["/og-carolina-marques-mendes-advogada-2026.jpg"],
   },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: [{ url: "/favicon-cmm.svg", type: "image/svg+xml" }],
+    shortcut: "/favicon-cmm.svg",
   },
 };
 

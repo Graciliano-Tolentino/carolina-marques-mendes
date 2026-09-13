@@ -33,6 +33,11 @@ test("includes SEO endpoints and excludes preview metadata", async () => {
     new URL("../public/og-carolina-marques-mendes-advogada-2026.jpg", import.meta.url),
   );
   assert.ok(socialImage.size > 0);
+  assert.match(layout, /favicon-cmm\.svg/);
+  const favicon = await read("public/favicon-cmm.svg");
+  assert.match(favicon, />CMM<\/text>/);
+  assert.match(favicon, /#071724/);
+  assert.match(favicon, /#c4a064/);
   assert.match(await read("app/robots.ts"), /sitemap/);
   assert.match(await read("app/sitemap.ts"), /privacidade/);
 });
