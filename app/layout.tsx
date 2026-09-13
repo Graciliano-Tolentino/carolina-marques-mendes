@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | Carolina Marques Mendes",
   },
   description:
-    "Dra. Carolina Marques Mendes, OAB/SP 296.392. Atendimento jurídico individualizado em Santos/SP, com análise técnica, escuta e comunicação clara.",
+    "Dra. Carolina Marques Mendes, OAB/SP 296.392. Atendimento jurídico individualizado em Santos/SP, com análise cuidadosa, escuta e comunicação clara.",
   applicationName: "Carolina Marques Mendes Advocacia",
   authors: [{ name: "Carolina Marques Mendes" }],
   creator: "Carolina Marques Mendes",
@@ -36,17 +36,25 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: "/",
     siteName: "Carolina Marques Mendes Advocacia",
-    title: "Carolina Marques Mendes | Advogada em Santos",
+    title: "Dra. Carolina Marques Mendes | Advogada em Santos",
     description:
-      "Atendimento jurídico individualizado em Santos/SP, com análise técnica, escuta e comunicação clara.",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Carolina Marques Mendes Advocacia" }],
+      "Precisa de orientação jurídica? Atendimento individualizado, análise cuidadosa e comunicação clara. Fale diretamente com a Dra. Carolina.",
+    images: [
+      {
+        url: "/og-carolina-marques-mendes-advogada-2026.jpg",
+        width: 1200,
+        height: 630,
+        type: "image/jpeg",
+        alt: "Retrato profissional da Dra. Carolina Marques Mendes, advogada em Santos",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Carolina Marques Mendes | Advogada em Santos",
+    title: "Dra. Carolina Marques Mendes | Advogada em Santos",
     description:
-      "Atendimento jurídico individualizado em Santos/SP, com análise técnica, escuta e comunicação clara.",
-    images: ["/og-image.png"],
+      "Precisa de orientação jurídica? Atendimento individualizado, análise cuidadosa e comunicação clara. Fale diretamente com a Dra. Carolina.",
+    images: ["/og-carolina-marques-mendes-advogada-2026.jpg"],
   },
   icons: {
     icon: "/favicon.svg",

@@ -27,6 +27,12 @@ test("includes SEO endpoints and excludes preview metadata", async () => {
   const layout = await read("app/layout.tsx");
   assert.doesNotMatch(layout, /codex-preview/);
   assert.match(layout, /openGraph/);
+  assert.match(layout, /og-carolina-marques-mendes-advogada-2026\.jpg/);
+  assert.match(layout, /Precisa de orientação jurídica\?/);
+  const socialImage = await stat(
+    new URL("../public/og-carolina-marques-mendes-advogada-2026.jpg", import.meta.url),
+  );
+  assert.ok(socialImage.size > 0);
   assert.match(await read("app/robots.ts"), /sitemap/);
   assert.match(await read("app/sitemap.ts"), /privacidade/);
 });
