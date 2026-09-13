@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { readFile, stat } from "node:fs/promises";
 import test from "node:test";
 
 const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
@@ -29,4 +29,30 @@ test("includes SEO endpoints and excludes preview metadata", async () => {
   assert.match(layout, /openGraph/);
   assert.match(await read("app/robots.ts"), /sitemap/);
   assert.match(await read("app/sitemap.ts"), /privacidade/);
+});
+
+test("ships the five professional photographs and clear contact paths", async () => {
+  const page = await read("app/page.tsx");
+  const images = [
+    "carolina-marques-mendes-hero.jpg",
+    "carolina-marques-mendes-autoridade.jpg",
+    "carolina-marques-mendes-proposito.jpg",
+    "carolina-marques-mendes-santos.jpg",
+    "carolina-marques-mendes-presenca.jpg",
+  ];
+
+  assert.match(page, /from "next\/image"/);
+  assert.match(page, /wa\.me\/5513974078084/);
+  assert.match(page, /sizes="/);
+
+  for (const image of images) {
+    assert.match(page, new RegExp(image));
+    const file = await stat(new URL(`../public/images/${image}`, import.meta.url));
+    assert.ok(file.size > 0);
+  }
+});
+
+test("documents the GitHub to Vercel to custom-domain flow", async () => {
+  const readme = await read("README.md");
+  assert.match(readme, /GitHub \(branch main\) → Vercel \(deploy automático\) → domínio personalizado/);
 });

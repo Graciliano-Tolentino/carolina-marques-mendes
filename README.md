@@ -56,7 +56,7 @@ cp .env.example .env.local
 ```
 
 ```text
-NEXT_PUBLIC_SITE_URL=https://dominio-confirmado.com.br
+NEXT_PUBLIC_SITE_URL=https://carolinamarquesmendes.adv.br
 ```
 
 Não use domínio fictício. Em previews da Vercel, a aplicação utiliza automaticamente a URL fornecida pela plataforma. Quando o domínio brasileiro for confirmado, cadastre a variável na Vercel para Production e faça um novo deploy.
@@ -79,14 +79,32 @@ Crie o repositório vazio no GitHub antes de adicionar a URL. Não inclua `node_
 
 ## Vercel
 
+O fluxo oficial deste projeto deve permanecer:
+
+```text
+GitHub (branch main) → Vercel (deploy automático) → domínio personalizado
+```
+
 1. Na Vercel, escolha **Add New → Project**.
 2. Importe o repositório do GitHub.
 3. Confirme o preset **Next.js**.
 4. Mantenha os comandos e o diretório de saída nos valores padrão.
 5. Faça o deploy.
-6. Após confirmar o domínio, adicione `NEXT_PUBLIC_SITE_URL` e conecte o domínio em **Settings → Domains**.
+6. Conecte `carolinamarquesmendes.adv.br` em **Settings → Domains** e mantenha
+   `NEXT_PUBLIC_SITE_URL=https://carolinamarquesmendes.adv.br` no ambiente de produção.
 
 Não é necessário `vercel.json` para esta aplicação.
+
+Depois que o projeto estiver conectado, cada atualização aprovada deve seguir
+`commit → push` na branch `main`. A Vercel fará o novo deploy de produção e
+manterá o domínio personalizado apontando para a versão publicada.
+
+## Fotografias institucionais
+
+As imagens da Dra. Carolina estão em `public/images/` com nomes descritivos.
+Elas são carregadas pelo componente nativo de imagens do Next.js, com dimensões
+responsivas, carregamento prioritário apenas no retrato principal e otimização
+automática no deploy da Vercel.
 
 ## Atualização de conteúdo
 

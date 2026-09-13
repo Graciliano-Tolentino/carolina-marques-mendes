@@ -1,13 +1,12 @@
 const explicitUrl = process.env.NEXT_PUBLIC_SITE_URL;
-const vercelProductionUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL;
-const vercelDeploymentUrl = process.env.VERCEL_URL;
-const resolvedHost = explicitUrl ?? vercelProductionUrl ?? vercelDeploymentUrl;
+const primaryDomain = "https://carolinamarquesmendes.adv.br";
+const resolvedHost = explicitUrl ?? primaryDomain;
 
 export const siteUrl = resolvedHost
   ? resolvedHost.startsWith("http")
     ? resolvedHost
     : `https://${resolvedHost}`
-  : "http://localhost:3000";
+  : primaryDomain;
 
 export const professionalProfile = {
   name: "Carolina Marques Mendes Advocacia",
