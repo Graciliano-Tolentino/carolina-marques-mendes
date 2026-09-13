@@ -41,11 +41,11 @@ export const metadata: Metadata = {
       "Precisa de orientação jurídica? Atendimento individualizado, análise cuidadosa e comunicação clara. Fale diretamente com a Dra. Carolina.",
     images: [
       {
-        url: "/og-carolina-marques-mendes-advogada-2026.jpg",
+        url: "/og-carolina-marques-mendes-autoridade-2026.jpg",
         width: 1200,
         height: 630,
         type: "image/jpeg",
-        alt: "Retrato profissional da Dra. Carolina Marques Mendes, advogada em Santos",
+        alt: "Retrato profissional da Dra. Carolina Marques Mendes em Santos",
       },
     ],
   },
@@ -54,11 +54,24 @@ export const metadata: Metadata = {
     title: "Dra. Carolina Marques Mendes | Advogada em Santos",
     description:
       "Precisa de orientação jurídica? Atendimento individualizado, análise cuidadosa e comunicação clara. Fale diretamente com a Dra. Carolina.",
-    images: ["/og-carolina-marques-mendes-advogada-2026.jpg"],
+    images: ["/og-carolina-marques-mendes-autoridade-2026.jpg"],
   },
   icons: {
-    icon: [{ url: "/favicon-cmm.svg", type: "image/svg+xml" }],
-    shortcut: "/favicon-cmm.svg",
+    icon: [
+      {
+        url: "/favicon-carolina-balanca-2026.png",
+        type: "image/png",
+        sizes: "512x512",
+      },
+    ],
+    shortcut: "/favicon-carolina-balanca-2026.png",
+    apple: [
+      {
+        url: "/favicon-carolina-balanca-2026.png",
+        type: "image/png",
+        sizes: "512x512",
+      },
+    ],
   },
 };
 
